@@ -7,17 +7,18 @@
     <title>Komal Deshmukh | Fitness & Lifestyle</title>
     <link rel="stylesheet" href="style.css">
 
-    <!-- Fonts from Google -->
+    <!-- Fonts from Google: Playfair Display (Serif) & Inter (Clean Sans for body fallback) -->
+    <!-- Ideally Helvetica Neue is a system font, using Playfair for that elite look -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;600&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap"
         rel="stylesheet">
 </head>
 
 <body>
 
-    <nav class="container">
-        <a href="#" class="logo">KD.</a>
+    <nav>
+        <a href="#" class="logo">KOMAL DESHMUKH</a>
         <div class="mobile-toggle" id="mobile-toggle">
             <span></span>
             <span></span>
@@ -25,32 +26,28 @@
         </div>
         <div class="nav-links" id="nav-links">
             <a href="#about">About</a>
-            <a href="#coaching">Coaching</a>
-            <a href="#merch">Merch</a>
-            <a href="#content">Content</a>
+            <a href="#philosophy">Philosophy</a>
+            <a href="#shop">Shop</a>
+            <a href="#podcast">Podcast</a>
             <a href="#contact">Contact</a>
-            <a href="#coaching" class="btn btn-outline" style="font-size: 0.9rem; padding: 0.5rem 1rem;">Join Now</a>
         </div>
     </nav>
 
-    <header class="hero container">
+    <header class="hero">
         <div class="hero-content">
-            <h1>KOMAL<br>DESHMUKH</h1>
-            <p>Empowering you to build a stronger body and a resilient mind. The ultimate destination for fitness,
-                lifestyle, and growth.</p>
-            <div style="margin-top: 2rem;">
-                <a href="#coaching" class="btn">Start Training</a>
-                <a href="#content" class="btn btn-outline" style="margin-left: 1rem;">Latest Content</a>
+            <h1 class="hero-title">ELEVATE YOUR<br>EXISTENCE</h1>
+            <p
+                style="text-align: center; margin-bottom: 2rem; max-width: 400px; margin-left: auto; margin-right: auto;">
+                A holistic approach to fitness, mindset, and living a life of unlimited potential.
+            </p>
+            <div style="text-align: center;">
+                <a href="#shop" class="btn">Explore The World</a>
             </div>
         </div>
-        <img src="assets/hero.png" alt="Komal Deshmukh Fitness" class="hero-image">
-    </header>
-
-    <div class="marquee-container">
-        <div class="marquee-content">
-            <span>FITNESS</span>•<span>LIFESTYLE</span>•<span>MINDSET</span>•<span>COACHING</span>•<span>NUTRITION</span>•<span>FITNESS</span>•<span>LIFESTYLE</span>•<span>MINDSET</span>•<span>COACHING</span>•<span>NUTRITION</span>
+        <div class="hero-image-container">
+            <img src="assets/hero.png" alt="Komal Deshmukh" class="hero-image">
         </div>
-    </div>
+    </header>
 
     <section id="about" class="container">
         <div class="grid about-grid">
@@ -58,92 +55,78 @@
                 <img src="assets/about.png" alt="About Komal">
             </div>
             <div class="about-text">
-                <h2 class="section-title">Who is Komal?</h2>
-                <p style="font-size: 1.1rem; margin-bottom: 2rem;">
-                    Komal Deshmukh is a certified fitness coach, lifestyle mentor, and digital creator dedicated to
-                    helping women unlock their full potential. With years of experience in personal training and
-                    nutrition, Komal blends science-backed methods with holistic lifestyle changes.
+                <h2 class="section-title" style="text-align: left; margin-bottom: 1rem;">THE VISIONARY</h2>
+                <div style="width: 50px; height: 1px; background: #000; margin-bottom: 2rem;"></div>
+                <p style="font-size: 1.1rem; margin-bottom: 2rem; line-height: 1.8;">
+                    Komal Deshmukh is more than a coach; she is a catalyst for transformation. Blending high-performance
+                    fitness strategies with deep mindset work, she helps women curate a life of balance, strength, and
+                    elegance.
                 </p>
-                <p style="margin-bottom: 2rem; color: #aaa;">
-                    "My mission is simple: to help you fall in love with the process of becoming the best version of
-                    yourself, inside and out."
+                <p style="margin-bottom: 2rem;">
+                    "True power is quiet. It is the discipline to show up for yourself, day after day, not for applause,
+                    but for the profound satisfaction of becoming who you were meant to be."
                 </p>
-                <a href="#contact" class="btn-outline" style="padding: 1rem 2rem;">Get in Touch</a>
+                <a href="#contact" class="btn-outline">Read Full Story</a>
             </div>
         </div>
     </section>
 
-    <section id="hub" class="container">
-        <h2 class="section-title">The Ecosystem</h2>
+    <section id="shop" class="container">
+        <h2 class="section-title">THE COLLECTION</h2>
         <div class="grid hub-grid">
 
-            <!-- Coaching / Ebooks -->
+            <!-- Ebook -->
             <article class="hub-card">
-                <div class="meta">Digital Product</div>
                 <img src="assets/ebook.png" alt="Body & Mind Ebook">
-                <h3>Body & Mind Ebook</h3>
-                <p>The comprehensive 8-week guide to transforming your habits.</p>
-                <a href="#" class="btn" style="margin-top: auto;">Get It Now</a>
+                <div class="hub-card-content">
+                    <div class="meta">Digital</div>
+                    <h3>BODY & MIND</h3>
+                    <p>The 8-Week Transformation Guide</p>
+                    <a href="#" class="btn-outline" style="margin-top: 1rem; display: inline-block;">Purchase</a>
+                </div>
             </article>
 
             <!-- Merch -->
             <article class="hub-card">
-                <div class="meta">Apparel</div>
                 <img src="assets/merch.png" alt="KD Merch">
-                <h3>KD Signature Tee</h3>
-                <p>Limited edition oversized pump covers. Premium quality.</p>
-                <a href="#" class="btn" style="margin-top: auto;">Shop Drop</a>
+                <div class="hub-card-content">
+                    <div class="meta">Apparel</div>
+                    <h3>THE SIGNATURE TEE</h3>
+                    <p>Premium Cotton in Slate</p>
+                    <a href="#" class="btn-outline" style="margin-top: 1rem; display: inline-block;">Shop Now</a>
+                </div>
             </article>
 
             <!-- Podcast -->
             <article class="hub-card">
-                <div class="meta">Podcast</div>
                 <img src="assets/podcast.png" alt="Podcast">
-                <h3>The KD Show</h3>
-                <p>Weekly conversations on fitness, business, and mindset.</p>
-                <a href="#" class="btn btn-outline" style="margin-top: auto;">Listen</a>
-            </article>
-
-            <!-- YouTube/Video Placeholder -->
-            <article class="hub-card">
-                <div class="meta">Video</div>
-                <div
-                    style="height: 250px; background: #222; display: flex; align-items: center; justify-content: center; color: #555; margin-bottom: 1rem;">
-                    [Dynamic Workout Video]
+                <div class="hub-card-content">
+                    <div class="meta">Audio</div>
+                    <h3>THE KD CONVERSATIONS</h3>
+                    <p>Weekly insights on growth.</p>
+                    <a href="#" class="btn-outline" style="margin-top: 1rem; display: inline-block;">Listen</a>
                 </div>
-                <h3>Full Body HIIT</h3>
-                <p>Follow along with this intense 20-minute heater.</p>
-                <a href="#" class="btn btn-outline" style="margin-top: auto;">Watch on YT</a>
             </article>
 
         </div>
     </section>
 
     <section id="contact" class="container">
-        <h2 class="section-title">Let's Work Together</h2>
-        <div class="grid contact-grid">
-            <div>
-                <h3 style="color: white; margin-bottom: 1rem;">Contact Info</h3>
-                <p style="margin-bottom: 2rem; color: #aaa;">For brand collaborations, coaching inquiries, or just to
-                    say hi.</p>
-                <ul style="font-size: 1.2rem;">
-                    <li style="margin-bottom: 0.5rem;">📧 hello@komaldeshmukh.com</li>
-                    <li style="margin-bottom: 0.5rem;">📱 @komal.fit</li>
-                    <li>📍 Mumbai, India</li>
-                </ul>
-            </div>
+        <div class="contact-container">
+            <h2 class="section-title">INQUIRIES</h2>
+            <p>For coaching applications, brand partnerships, or speaking engagements.</p>
             <form class="contact-form">
-                <input type="text" placeholder="Your Name">
-                <input type="email" placeholder="Your Email">
-                <textarea rows="5" placeholder="Message"></textarea>
-                <button type="submit" class="btn">Send Message</button>
+                <input type="text" placeholder="Full Name">
+                <input type="email" placeholder="Email Address">
+                <textarea rows="4" placeholder="How can we help you?"></textarea>
+                <button type="submit" class="btn" style="width: 100%; margin-top: 1rem;">Submit Request</button>
             </form>
         </div>
     </section>
 
     <footer>
         <div class="container">
-            <p>&copy; 2024 Komal Deshmukh. All Rights Reserved.</p>
+            <p>&copy; 2025 Komal Deshmukh. Excellence is a Habit.</p>
         </div>
     </footer>
 
