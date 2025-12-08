@@ -11,11 +11,23 @@
     --font-heading: 'Playfair Display', serif;
     --font-body: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
 
-    --spacing-xs: 0.5rem;
-    --spacing-sm: 1.5rem;
-    --spacing-md: 3rem;
-    --spacing-lg: 6rem;
-    --spacing-xl: 10rem;
+    --spacing-xs: 1rem;
+    --spacing-sm: 2.5rem;
+    --spacing-md: 5rem;
+    --spacing-lg: 10rem;
+    --spacing-xl: 15rem;
+}
+
+/* Animations */
+.reveal-on-scroll {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 1s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.reveal-on-scroll.is-visible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 * {
@@ -149,8 +161,11 @@ nav {
     justify-content: space-between;
     align-items: center;
     padding: var(--spacing-sm) var(--spacing-md);
-    background-color: var(--color-bg);
-    position: sticky;
+    background-color: transparent;
+    /* Transparent for overlay */
+    position: absolute;
+    /* Overlay on hero */
+    width: 100%;
     top: 0;
     z-index: 100;
 }
@@ -190,21 +205,36 @@ nav {
 
 /* Hero Section */
 .hero {
-    min-height: 80vh;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    height: 100vh;
+    /* Full viewport height */
+    min-height: 700px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    padding-top: var(--spacing-md);
+    position: relative;
+    overflow: hidden;
+    padding-top: 0;
+    /* Removing padding as it's flex centered */
+    margin-bottom: var(--spacing-lg);
+    /* Space after hero */
 }
 
 .hero-content {
-    padding: var(--spacing-md);
-    text-align: left;
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    max-width: 800px;
+    padding: 0 var(--spacing-sm);
 }
 
 .hero-image-container {
-    height: 80vh;
-    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
 }
 
 .hero-image {
@@ -216,10 +246,19 @@ nav {
 
 /* Sections */
 section {
-    padding: var(--spacing-lg) 0;
+    padding: var(--spacing-xl) 0;
+    /* Ensure immense spacing between sections */
 }
 
-/* About Grid */
+/* Brands Section - Fix spacing */
+.brands-container {
+    padding: var(--spacing-lg) 0;
+    border-bottom: 1px solid var(--color-border);
+    text-align: center;
+    margin-top: var(--spacing-md);
+    /* Add top margin if needed */
+}
+
 .about-grid {
     grid-template-columns: 1fr 1fr;
     align-items: center;
@@ -278,6 +317,83 @@ section {
     margin-bottom: var(--spacing-xs);
     text-transform: uppercase;
     letter-spacing: 2px;
+}
+
+/* Socials Section */
+.socials-grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--spacing-sm);
+}
+
+.social-card {
+    border: 1px solid var(--color-border);
+    padding: var(--spacing-sm);
+    text-align: center;
+    transition: transform 0.3s ease;
+    background-color: white;
+}
+
+.social-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--color-text);
+}
+
+.social-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: var(--spacing-xs);
+}
+
+.social-card p {
+    font-size: 0.9rem;
+    margin-bottom: var(--spacing-sm);
+}
+
+/* Brands Section */
+.brands-container {
+    padding: var(--spacing-md) 0;
+    border-bottom: 1px solid var(--color-border);
+    text-align: center;
+}
+
+.brands-image {
+    max-width: 80%;
+    margin: 0 auto;
+    opacity: 0.8;
+    mix-blend-mode: multiply;
+}
+
+/* Achievements Section */
+.achievements-grid {
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: var(--spacing-lg);
+}
+
+.achievement-list {
+    list-style: none;
+    counter-reset: achievement-counter;
+}
+
+.achievement-list li {
+    padding: var(--spacing-sm) 0;
+    border-top: 1px solid var(--color-border);
+    position: relative;
+    padding-left: 3rem;
+}
+
+.achievement-list li::before {
+    counter-increment: achievement-counter;
+    content: "0" counter(achievement-counter);
+    position: absolute;
+    left: 0;
+    top: var(--spacing-sm);
+    font-family: var(--font-heading);
+    color: var(--color-accent);
+}
+
+.achievement-list h4 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
 }
 
 /* Contact */
